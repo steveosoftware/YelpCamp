@@ -54,7 +54,7 @@ app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
 
-
-app.listen(3000, function(req,res){
+const port = process.env.PORT || 3000
+app.listen(port, function(){
     console.log('server is listening, muhaha!');
 });
