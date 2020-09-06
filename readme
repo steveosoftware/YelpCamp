@@ -1,0 +1,76 @@
+
+
+
+##Auth P1. 1 - Add User Model
+*Install all packages needed for auth
+*Define User model
+
+##AUTH Pt. 2 REGISTER USER
+* Configure Passport
+* Add Register Routes
+* Add register template
+
+##Auth Pt. 3 - Login
+* Add login Routes* Add login template
+
+
+##Auth Pt. 4 - Logout/Navbar
+* Add logout Route
+* Prevent user from adding a comment if not signed in
+* Add links to Navbar
+* Show/hide auth links correctly
+
+
+##Refactor Routes
+* Use Express router to reorganize Routes
+
+##Users & Comments
+* Associate users and Comments - changed the author field in comments from a String to an Object, with id and username;  the id is an object with type and ref
+* Save author's name to a comment automatically - go to comment route and plug in logic
+        1---comment.author.id = req.user._id
+        2===comment.author.username = req.user.username
+        3 - make change in show route , 
+
+#Users & Campgrounds
+* Prevent an unatuhenticated user from creating a Campground
+* Save username+id to newly created campground 
+
+* Add Method-Override
+* Add Edit Route for Campgrounds
+* Add Link to Edit packages
+* Add Update Route
+
+#Deleting Campgrounds
+* Add Destroy Route
+* Add Delete button
+
+# Authorization - 
+* User can only edit his/her Campgrounds
+* User can only delete his/her Campgrounds
+* Hide/show edit and delete buttons
+
+Authentication is finding out if someone is who they say they are
+Authorization is finding out what permissions someone has
+
+# Editing Comments
+* Add Edit route for comments
+* Add Edit button
+* Add Update route
+
+// campgrounds/:id/edit
+// campgrounds/:id/comments/:comment_id/edit
+
+# Deleting Comments
+* Add Destroy route
+* Add Delete button
+
+Campground destroy route: /campgrounds/:id
+Comment destroy route: /campground/:id/comments/:comment_id
+
+# Adding in Flash!
+* Demo working version
+* Install and configure connect-Flash
+* Add bootstrap alerts to header 
+
+
+
