@@ -16,9 +16,9 @@ const seedDB        = require('./seeds');
 const commentRoutes     = require('./routes/comments');
 const campgroundRoutes  = require('./routes/campgrounds');
 const indexRoutes       = require('./routes/index');
-const config            = require('../config/keys');
+const config            = require('./config/keys');
 
-mongoose.connect(MONGO_KEY, {
+mongoose.connect(config.mongoKey, {
     useNewUrlParser: true,
     useCreateIndex: true
 }).then(() => {
