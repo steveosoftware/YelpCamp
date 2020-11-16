@@ -16,8 +16,9 @@ const seedDB        = require('./seeds');
 const commentRoutes     = require('./routes/comments');
 const campgroundRoutes  = require('./routes/campgrounds');
 const indexRoutes       = require('./routes/index');
+const config            = require('../config/keys');
 
-mongoose.connect('mongodb+srv://stinkypiece:shithead@cluster0.kcads.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(MONGO_KEY, {
     useNewUrlParser: true,
     useCreateIndex: true
 }).then(() => {
